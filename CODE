@@ -1,0 +1,23 @@
+#include<pic.h>
+#define XTAL_FREQ 20000000
+#define led RB0
+#define button1 RD0
+#define button2 RD1
+int main()
+{
+PORTB=0x00;
+PORTD=0x00;
+TRISB=0x00;
+TRISD=0x00;
+while(1)
+{
+if(button1==1)
+{
+led=0;
+}
+else if(button2==1)
+{
+led=1;
+}
+}
+}
